@@ -1,3 +1,15 @@
+/*
+ * PROBLEM: Valid Anagram
+ * LINK: https://neetcode.io/problems/is-anagram
+ * -------------------------------------------------------------------------
+ * APPROACH EVOLUTION:
+ * 1. Optimized:   O(n)   - Frequency mapping using a Map.
+ * -------------------------------------------------------------------------
+ * TIME COMPLEXITY:  O(n) - Single pass to count, single pass to verify.
+ * SPACE COMPLEXITY: O(k) - Where k is the number of unique characters (max 26 for alphabet).
+ * -------------------------------------------------------------------------
+ */
+
 package main
 
 func isAnagram(s, t string) bool {
