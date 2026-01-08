@@ -16,19 +16,15 @@ Solutions are organized by pattern rather than difficulty to emphasize architect
 * **/Two_Pointers** - Linear traversals from both ends or slow/fast pointer logic.
 * **/Sliding_Window** - Dynamic and fixed-size window optimizations.
 * **/Binary_Search** - Logarithmic search patterns and boundary condition handling.
-* **/Low_Level_C** - Deep dives into memory, pointers, and manual optimizations.
 
 ## 🛠️ Tech Stack
 * **TypeScript:** Rapid prototyping and logic validation.
-* **C:** Understanding "under the hood" memory management and pointer arithmetic.
-* **Go / Java:** (Upcoming) Scaling solutions with production-grade languages.
+* **Go / Java:** Scaling solutions with production-grade languages.
 
 ## 📈 Performance Tracking
 Each solution file contains a header with:
-- **Difficulty:** (Easy/Medium/Hard)
 - **Time Complexity:** Analytical growth (Big O).
 - **Space Complexity:** Memory footprint analysis.
-- **Notes:** Brief explanation of the "Aha!" moment or the specific optimization used.
 
 ---
 *“In theory, theory and practice are the same. In practice, they are not.”* ```
