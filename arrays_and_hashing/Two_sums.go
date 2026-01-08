@@ -1,3 +1,14 @@
+/*
+ * PROBLEM: Two sums
+ * LINK: https://neetcode.io/problems/two-integer-sum
+ * -------------------------------------------------------------------------
+ * APPROACH EVOLUTION:
+ * 1. Optimized: O(n) - Map one pass
+ * -------------------------------------------------------------------------
+ * TIME COMPLEXITY:  O(n) - Constant time loop with Map
+ * SPACE COMPLEXITY: O(n) - Storing up to N elements in the Map
+ * -------------------------------------------------------------------------
+ */
 package main
 
 import "fmt"
