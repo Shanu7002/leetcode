@@ -14,6 +14,6 @@ func hasDuplicate(nums []int) bool {
 	return false
 }
 
-func main() {
+func mainHasDuplicate() {
 
 }
