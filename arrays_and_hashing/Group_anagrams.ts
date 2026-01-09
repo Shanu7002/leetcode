@@ -1,3 +1,25 @@
+/*
+ * PROBLEM: Group Anagrams
+ * LINK: https://neetcode.io/problems/anagram-groups
+ * -------------------------------------------------------------------------
+ * APPROACH EVOLUTION:
+ * 1. Sorting-Based: Sort each string and use it as a key & anagrams share the same sorted form. (groupAnagrams)
+ * 2. Frequency Counter (Optimized): Count character frequencies (26 letters) & use the count as a unique key. (groupAnagrams2)
+ * -------------------------------------------------------------------------
+ * TIME COMPLEXITY:
+ * - groupAnagrams:  O(n * k log k)
+ * - groupAnagrams2: O(n * k)
+ * -------------------------------------------------------------------------
+ * SPACE COMPLEXITY:
+ * - O(n * k) for storing grouped anagrams
+ * - O(1) extra space for the frequency array
+ * -------------------------------------------------------------------------
+ * OPTIMIZATION STRATEGY:
+ * - Use a Hash Map for grouping.
+ * - Avoid sorting by using character counts.
+ * -------------------------------------------------------------------------
+ */
+
 function groupAnagrams(strs: string[]): string[][] {
     const map = new Map<string, string[]>();
 
