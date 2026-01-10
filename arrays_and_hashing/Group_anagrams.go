@@ -24,7 +24,7 @@ func keyByCount(s string) string {
 }
 
 
- func anagramGroups(strs []string) [][]string {
+func anagramGroups(strs []string) [][]string {
 	m := make(map[string][]string)
 
 	for _, str := range strs {
@@ -38,4 +38,25 @@ func keyByCount(s string) string {
 	}
 
 	return result
- }
+}
+
+func anagramGroups2(strs []string) [][]string {
+	m := make(map[[26]int][]string)
+
+	for _, str := range strs {
+		var count [26]int
+
+		for _, ch := range str {
+			count[ch-'a']++
+		}
+		
+		m[count] = append(m[count], str)
+	}
+
+	result := make([][]string, 0, len(m))
+	for _, group := range m {
+		result = append(result, group)
+	}
+
+	return result
+}
