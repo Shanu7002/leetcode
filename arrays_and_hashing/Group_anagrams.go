@@ -13,4 +13,29 @@
 
  package main
 
- func anagramGroups()
+func keyByCount(s string) string {
+	count := [26]int{}
+
+	for _, ch := range s {
+		count[ch-'a']++
+	}
+
+	return fmt.Sprint(count)
+}
+
+
+ func anagramGroups(strs []string) [][]string {
+	m := make(map[string][]string)
+
+	for _, str := range strs {
+		key := keyByCount(str)
+		m[key] = append(m[key], str)
+	}
+
+	result := [][]string{}
+	for _, group := range m {
+		result = append(result, group)
+	}
+
+	return result
+ }
