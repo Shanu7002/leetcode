@@ -17,11 +17,19 @@ function topKFrequent(nums: number[], k: number): number[] {
             answer.push(...bucket[i])
         }
     }
-
-    console.log(bucket)
-    console.log(m)
-
     return answer.slice(0, k)
 }
 
-console.log(topKFrequent([5, 1, 2, 3, 4, 1, 2, 3], 1))
+function topKFrequent2(nums: number[], k: number): number[] {
+let m = new Map<number, number>();
+  nums.forEach(n => {
+    if (!m.has(n)) {
+      m.set(n, 1);
+    } else {
+      m.set(n, m.get(n)! + 1);
+    }
+  });
+  let keys = Array.from(m.keys());
+  keys.sort((a, b) => m.get(b)! - m.get(a)!);
+  return keys.slice(0, k);
+}
