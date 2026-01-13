@@ -11,7 +11,9 @@
  * -------------------------------------------------------------------------
  */
 
- package main
+package main
+
+import "fmt"
 
 func keyByCount(s string) string {
 	count := [26]int{}
@@ -22,7 +24,6 @@ func keyByCount(s string) string {
 
 	return fmt.Sprint(count)
 }
-
 
 func anagramGroups(strs []string) [][]string {
 	m := make(map[string][]string)
@@ -49,7 +50,7 @@ func anagramGroups2(strs []string) [][]string {
 		for _, ch := range str {
 			count[ch-'a']++
 		}
-		
+
 		m[count] = append(m[count], str)
 	}
 
