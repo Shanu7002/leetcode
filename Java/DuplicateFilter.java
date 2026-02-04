@@ -15,7 +15,6 @@ public class DuplicateFilter {
         String[] names1 = {"Ava", "Emma", "Olivia"};
         String[] names2 = {"Olivia", "Sophia", "Emma"};
 
-        // Deve imprimir Ava, Emma, Olivia, Sophia (em qualquer ordem)
         System.out.println(String.join(", ", uniqueNames(names1, names2)));
     }
 }
