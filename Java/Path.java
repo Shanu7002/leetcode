@@ -40,7 +40,6 @@ public class Path {
     }
 
     public static void main(String[] args) {
-//        Path path = new Path("/a/b/c/d");
         Path path = new Path("/a/b/c/d");
         path.cd("../x");
         System.out.println(path.getPath());
