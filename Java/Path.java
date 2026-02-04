@@ -43,6 +43,5 @@ public class Path {
         Path path = new Path("/a/b/c/d");
         path.cd("../x");
         System.out.println(path.getPath());
-        // Esperado: /a/b/c/x
     }
 }
