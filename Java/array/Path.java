@@ -1,5 +1,6 @@
 package array;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class Path {
@@ -14,14 +15,35 @@ public class Path {
     }
 
     public void cd(String newPath) {
-        // TODO: Implemente a lógica de navegação. 
-        // Lide com caminhos absolutos (começam com /) e relativos.
+        if (newPath == null || newPath.isEmpty()) return;
+
+        Stack<String> stack = new Stack<>();
+
+        if(!newPath.startsWith("/")) {
+            for (String parts : getPath().split("/")) {
+                if(!parts.isEmpty()) {
+                    stack.push(parts);
+                }
+            }
+        }
+
+        for (String part : newPath.split("/")) {
+            if (part.equals(".") || part.isEmpty()) continue;
+
+            if (part.equals("..")) {
+                if(!stack.isEmpty()) {
+                    stack.pop();
+                }
+            } else {
+                stack.push(part);
+            }
+        }
+        this.currentPath = "/" + String.join("/", stack);
     }
 
     public static void main(String[] args) {
         Path path = new Path("/a/b/c/d");
         path.cd("../x");
         System.out.println(path.getPath());
-        // Esperado: /a/b/c/x
     }
 }
