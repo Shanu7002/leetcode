@@ -3,29 +3,26 @@ package array;
 public class test {
 
     public static int calculateRequiredWalls(int qnt, int wallSize, String titans, int pSize, int mSize, int gSize) {
-        // verificação com throw error
+        // throw error verificatiob
         if (titans == null || titans.isEmpty()) throw new IllegalArgumentException("Titans cannot be empty.");
         if (qnt != titans.length()) throw new IllegalArgumentException("Quantity smaller than titans length.");
         if (wallSize <= 0) throw new IllegalArgumentException("Wall size must be positive.");
 
-        // inicializa a resposta final
         long totalSize = 0;
 
-        // percorre cada letra dos titans
+        // look every letter inside the titans
         for (int i = 0; i < titans.length(); i++) {
             char titan = titans.charAt(i);
             switch (titan) {
                 case 'P' -> totalSize += pSize;
                 case 'M' -> totalSize += mSize;
                 case 'G' -> totalSize += gSize;
-                // Default case gera erro por motivos obvios
+                // Default case throw error too
                 default  -> throw new IllegalArgumentException("Unknown titan type: " + titan);
             }
         }
 
         if (totalSize == 0) return 0;
-
-        // divide o tamanho total pelo tamanho da wall arredondando pra cima
         return (int) ((totalSize + wallSize - 1) / wallSize);
     }
 
